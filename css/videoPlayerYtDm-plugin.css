@@ -1,0 +1,608 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?m77z48");
+  src: url("fonts/icomoon.eot?m77z48#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?m77z48") format("truetype"), url("fonts/icomoon.woff?m77z48") format("woff"), url("fonts/icomoon.svg?m77z48#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play2:before {
+  content: "\ea15";
+}
+
+.icon-pause:before {
+  content: "\ea16";
+}
+
+.icon-stop:before {
+  content: "\ea17";
+}
+
+.icon-previous:before {
+  content: "\ea18";
+}
+
+.icon-play3:before {
+  content: "\ea1c";
+}
+
+.icon-pause2:before {
+  content: "\ea1d";
+}
+
+.icon-stop2:before {
+  content: "\ea1e";
+}
+
+.icon-first:before {
+  content: "\ea21";
+}
+
+.icon-volume-high:before {
+  content: "\ea26";
+}
+
+.icon-volume-medium:before {
+  content: "\ea27";
+}
+
+.icon-volume-low:before {
+  content: "\ea28";
+}
+
+.icon-volume-mute:before {
+  content: "\ea29";
+}
+
+.icon-volume-mute2:before {
+  content: "\ea2a";
+}
+
+.icon-volume-increase:before {
+  content: "\ea2b";
+}
+
+.icon-volume-decrease:before {
+  content: "\ea2c";
+}
+
+.icon-arrow-up:before {
+  content: "\ea32";
+}
+
+.icon-arrow-right:before {
+  content: "\ea34";
+}
+
+.icon-arrow-down:before {
+  content: "\ea36";
+}
+
+.icon-arrow-left:before {
+  content: "\ea38";
+}
+
+.icon-radio-checked2:before {
+  content: "\ea55";
+}
+
+.icon-radio-unchecked:before {
+  content: "\ea56";
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Ubuntu', Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+#trace {
+  width: 550px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+h1 {
+  padding: 1rem 1.5rem;
+  color: #adadad;
+  background: #000;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  color: #adadad;
+  background: #000;
+}
+
+.titre {
+  width: 100%;
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 15px;
+  background: #adadad;
+}
+
+.explications {
+  width: 100%;
+  max-width: 1200px;
+  margin: 15px auto;
+  padding: 15px;
+  background: #adadad;
+}
+.explications i {
+  background: #dedede;
+}
+.explications .code {
+  width: 100%;
+  height: 600px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  background: #dedede;
+  border: 0;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 15px;
+  background: #adadad;
+  /* seek bar */
+}
+.video-player .iframe-container {
+  position: relative;
+  padding-bottom: 75%;
+  /* the padding-bottom value is bg.height/bg.width */
+  height: auto;
+  overflow: hidden;
+}
+.video-player .iframe-container iframe,
+.video-player .iframe-container object,
+.video-player .iframe-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-player .tools {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-top: 1.5rem;
+}
+.video-player .actions {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  /* volume bar */
+}
+@media (max-width: 500px) {
+  .video-player .actions {
+    width: 100%;
+  }
+}
+.video-player .actions a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-size: 0;
+  margin-right: 15px;
+  margin-right: 1.5rem;
+  min-width: 50px;
+}
+@media (max-width: 500px) {
+  .video-player .actions a {
+    margin-right: 1rem;
+  }
+}
+.video-player .actions a:before {
+  display: inline-block;
+  font-size: 2.5rem;
+  padding: 5px;
+}
+.video-player .actions a:hover, .video-player .actions a.active {
+  color: #fef02c;
+}
+.video-player .actions .volume.muted:before {
+  content: "\ea2a";
+}
+.video-player .actions .volume.muted33:before {
+  content: "\ea28";
+}
+.video-player .actions .volume.muted66:before {
+  content: "\ea27";
+}
+.video-player .actions .volumebar {
+  width: 100px;
+  display: inline-block;
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  /* Special styling for WebKit/Blink */
+  /* All the same stuff for Firefox */
+  /* All the same stuff for IE */
+  /* the track */
+}
+@media (max-width: 500px) {
+  .video-player .actions .volumebar {
+    width: 90px;
+    margin-right: 10px;
+  }
+}
+.video-player .actions .volumebar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.video-player .actions .volumebar:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+.video-player .actions .volumebar::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.video-player .actions .volumebar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 6px;
+  background: #000;
+  cursor: pointer;
+  transform: translateY(-42%);
+}
+@media (max-width: 500px) {
+  .video-player .actions .volumebar::-webkit-slider-thumb {
+    width: 40px;
+  }
+}
+.video-player .actions .volumebar::-moz-range-thumb {
+  height: 20px;
+  width: 6px;
+  background: #000;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+}
+@media (max-width: 500px) {
+  .video-player .actions .volumebar::-moz-range-thumb {
+    width: 40px;
+  }
+}
+.video-player .actions .volumebar::-ms-thumb {
+  height: 20px;
+  width: 6px;
+  background: #000;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .video-player .actions .volumebar::-ms-thumb {
+    width: 40px;
+  }
+}
+.video-player .actions .volumebar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #000;
+}
+.video-player .actions .volumebar:focus::-webkit-slider-runnable-track {
+  background: rgba(0, 0, 0, 0.75);
+}
+.video-player .actions .volumebar::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #000;
+  border: 0;
+  border-radius: 0;
+}
+.video-player .actions .volumebar::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.video-player .actions .volumebar::-ms-fill-lower {
+  background: #000;
+}
+.video-player .actions .volumebar:focus::-ms-fill-lower {
+  background: rgba(0, 0, 0, 0.75);
+}
+.video-player .actions .volumebar::-ms-fill-upper {
+  background: #000;
+}
+.video-player .actions .volumebar:focus::-ms-fill-upper {
+  background: rgba(0, 0, 0, 0.75);
+}
+.video-player .infos {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .video-player .infos {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}
+.video-player .seekbar {
+  margin: 15px 0;
+  margin: 1.5rem 0;
+}
+.video-player .seekbar .progress {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+.video-player .seekbar .progress .line {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 2px;
+  width: 100%;
+}
+.video-player .seekbar .progress .line:before {
+  content: " ";
+  background-color: rgba(254, 240, 44, 0.9);
+  border-radius: 6px;
+  display: block;
+  height: 6px;
+  position: absolute;
+  left: -3px;
+  top: 8px;
+  width: 6px;
+}
+.video-player .seekbar .progress .line:after {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 6px;
+  display: block;
+  height: 6px;
+  position: absolute;
+  right: -3px;
+  top: 8px;
+  width: 6px;
+}
+.video-player .seekbar .progress .line .current {
+  background-color: #fef02c;
+  height: 100%;
+  width: 0;
+  position: relative;
+  z-index: 2;
+}
+.video-player .seekbar .progress .line .current:after {
+  content: " ";
+  background-color: rgba(254, 240, 44, 0.9);
+  border-radius: 6px;
+  display: block;
+  height: 6px;
+  position: absolute;
+  right: -3px;
+  top: -2px;
+  width: 6px;
+  z-index: 3;
+  box-shadow: 0 0 8px #fef02c;
+}
+.video-player .seekbar .progress .chapters-line {
+  list-style: none;
+}
+.video-player .seekbar .progress .chapter-line {
+  position: absolute;
+  z-index: 10;
+  font-size: 0;
+  top: 50%;
+  left: 0;
+  color: #000;
+  text-decoration: none;
+  -moz-transform: translate(-50%, -100%);
+  -o-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -ms-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.video-player .seekbar .progress .chapter-line:before {
+  font-size: 1rem;
+}
+.video-player .seekbar .progress .chapter-line:hover {
+  color: #fef02c;
+}
+.video-player .seekbar .progress .chapter-line.active {
+  color: #fef02c;
+  -moz-transform: translate(-50%, -115%) scale(1.5);
+  -o-transform: translate(-50%, -115%) scale(1.5);
+  -ms-transform: translate(-50%, -115%) scale(1.5);
+  -webkit-transform: translate(-50%, -115%) scale(1.5);
+  transform: translate(-50%, -115%) scale(1.5);
+}
+.video-player .seekbar .progress .chapter-line.done {
+  color: #fef02c;
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.video-player .seekbar .progress .chapter-line.done:before {
+  content: "\ea32";
+}
+.video-player .spectrumSound .sineWave {
+  margin: auto;
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 5;
+}
+.video-player .spectrumSound .circles {
+  margin: auto;
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 6;
+}
+.video-player .spectrumSound .spectrum {
+  position: absolute;
+  left: 0;
+  height: 300px;
+}
+.video-player .spectrumSound .spectrum.spectrumPos {
+  bottom: 12px;
+}
+.video-player .spectrumSound .spectrum.spectrumNeg {
+  top: 12px;
+}
+.video-player .chapters {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.video-player .chapters li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+.video-player .chapters .chapter {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  padding: 2px 10px;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+.video-player .chapters .chapter:hover, .video-player .chapters .chapter.hover {
+  color: #fff;
+  background: #000;
+}
+.video-player .chapters .chapter.done {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+.video-player .chapters .chapter.done:hover {
+  color: #fff;
+  background: #000;
+}
+.video-player .chapters .chapter.active {
+  color: #fef02c;
+  background: #000;
+}
+
+/*# sourceMappingURL=videoPlayerYtDm-plugin.css.map */

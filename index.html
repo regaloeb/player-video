@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta property="og:title" content="Youtube API">
+		<meta property="og:description" content="On s'amuse avec Youtube API">
+        
+        <title>videoPlayer Youtube et dailymotion - plugin jQuery</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/videoPlayerYtDm-plugin.css" type="text/css">
+		
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+	
+		<section class="titre">
+			<h1>Plugin player vidéo Youtube et/ou Dailymotion</h1>
+		</section>
+		
+		<section class="video-player" data-videoId="xnFhxrVEyNo" data-w="4" data-h="3" data-controls="0" data-type="yt">
+			<h2>Player Youtube avec commandes personnalisées et chapitres</h2>
+			<div class="iframe-container">
+				<div class="video-container"></div>
+			</div>
+			<div class="tools">
+				<div class="actions">
+					<a href="#" class="play icon-play3">Play</a>
+					<a href="#" class="pause icon-pause2">Pause</a>
+					<a href="#" class="stop icon-stop2">Stop</a>
+					<a href="#" class="volume icon-volume-high">Volume</a>
+					<input class="volumebar" value="0" type="range">
+				</div>
+				<div class="infos">
+					<span class="time">00:00</span> / <span class="duration">00:00</span>
+					<!--<p class="currentTime"></p>-->
+				</div>
+			</div>
+			
+			<div class="seekbar">
+				<div class="progress">
+					<div class="line">
+						<div class="current"></div>
+					</div>
+					<ul class="chapters-line">
+						<li><a href="#" data-time="0" data-end="198" class="chapter-line icon-arrow-down">He's A Monster</a></li>
+						<li><a href="#" data-time="198" data-end="317" class="chapter-line icon-arrow-down">Gay Bar</a></li>
+						<li><a href="#" data-time="317" data-end="463" class="chapter-line icon-arrow-down">Perhaps</a></li>
+						<li><a href="#" data-time="463" data-end="658" class="chapter-line icon-arrow-down">Have Love</a></li>
+						<li><a href="#" data-time="658" data-end="846" class="chapter-line icon-arrow-down">Another Last Drink</a></li>
+						<li><a href="#" data-time="846" data-end="1119" class="chapter-line icon-arrow-down">Another Man</a></li>
+						<li><a href="#" data-time="1119" data-end="1279" class="chapter-line icon-arrow-down">The Fortune Teller</a></li>
+						<li><a href="#" data-time="1279" data-end="1498" class="chapter-line icon-arrow-down">The No Song</a></li>
+						<li><a href="#" data-time="1498" data-end="1685" class="chapter-line icon-arrow-down">I'm A Man</a></li>
+						<li><a href="#" data-time="1685" data-end="1880" class="chapter-line icon-arrow-down">The Flying Kitchen</a></li>
+						<li><a href="#" data-time="1880" data-end="2200" class="chapter-line icon-arrow-down">I Wanna Be Your Dog</a></li>
+						<li><a href="#" data-time="2200" data-end="1000000" class="chapter-line icon-arrow-down">He's A Monster (bis)</a></li>			
+					</ul>
+				</div>
+			</div>
+			<ul class="chapters">
+				<li><a href="#" data-time="0" data-end="198" class="chapter">He's A Monster</a></li>
+				<li><a href="#" data-time="198" data-end="317" class="chapter">Gay Bar</a></li>
+				<li><a href="#" data-time="317" data-end="463" class="chapter">Perhaps</a></li>
+				<li><a href="#" data-time="463" data-end="658" class="chapter">Have Love</a></li>
+				<li><a href="#" data-time="658" data-end="846" class="chapter">Another Last Drink</a></li>
+				<li><a href="#" data-time="846" data-end="1119" class="chapter">Another Man</a></li>
+				<li><a href="#" data-time="1119" data-end="1279" class="chapter">The Fortune Teller</a></li>
+				<li><a href="#" data-time="1279" data-end="1498" class="chapter">The No Song</a></li>
+				<li><a href="#" data-time="1498" data-end="1685" class="chapter">I'm A Man</a></li>
+				<li><a href="#" data-time="1685" data-end="1880" class="chapter">The Flying Kitchen</a></li>
+				<li><a href="#" data-time="1880" data-end="2200" class="chapter">I Wanna Be Your Dog</a></li>
+				<li><a href="#" data-time="2200" data-end="1000000" class="chapter">He's A Monster (bis)</a></li>
+			</ul>
+		</section>
+		
+		
+		<section class="video-player" data-videoId="IMvLFzNkFHE" data-w="16" data-h="9" data-type="yt">
+			<h2>Player Youtube avec commandes youtube</h2>
+			<div class="iframe-container">
+				<div class="video-container"></div>
+			</div>
+			<div class="tools">
+				<div class="actions">
+					<a href="#" class="play icon-play3">Play</a>
+					<a href="#" class="pause icon-pause2">Pause</a>
+					<a href="#" class="stop icon-stop2">Stop</a>
+					<a href="#" class="volume icon-volume-high">Volume</a>
+					<input class="volumebar" value="0" type="range">
+				</div>
+				<div class="infos">
+					<span class="time">00:00</span> / <span class="duration">00:00</span>
+					<!--<p class="currentTime"></p>-->
+				</div>
+			</div>
+			
+			<div class="seekbar">
+				<div class="progress">
+					<div class="line">
+						<div class="current"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section class="video-player" data-videoId="x58imn6" data-w="16" data-h="9" data-type="dm" data-autoplay="0">
+			<h2>Player Dailymotion avec commandes dm</h2>
+			<div class="iframe-container">
+				<div class="video-container"></div>
+			</div>
+			<div class="tools">
+				<div class="actions">
+					<a href="#" class="play icon-play3">Play</a>
+					<a href="#" class="pause icon-pause2">Pause</a>
+					<a href="#" class="stop icon-stop2">Stop</a>
+					<a href="#" class="volume icon-volume-high">Volume</a>
+					<input class="volumebar" value="0" type="range">
+				</div>
+				<div class="infos">
+					<span class="time">00:00</span> / <span class="duration">00:00</span>
+					<!--<p class="currentTime"></p>-->
+				</div>
+			</div>
+			<div class="seekbar">
+				<div class="progress">
+					<div class="line">
+						<div class="current"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="video-player" data-videoId="x58hi1g" data-w="16" data-h="9" data-controls="0" data-type="dm" data-autoplay="0">
+			<h2>Player Dailymotion avec commandes personnalisées et chapitres</h2>
+			<div class="iframe-container">
+				<div class="video-container"></div>
+			</div>
+			<div class="tools">
+				<div class="actions">
+					<a href="#" class="play icon-play3">Play</a>
+					<a href="#" class="pause icon-pause2">Pause</a>
+					<a href="#" class="stop icon-stop2">Stop</a>
+					<a href="#" class="volume icon-volume-high">Volume</a>
+					<input class="volumebar" value="0" type="range">
+				</div>
+				<div class="infos">
+					<span class="time">00:00</span> / <span class="duration">00:00</span>
+					<!--<p class="currentTime"></p>-->
+				</div>
+			</div>
+			<div class="seekbar">
+				<div class="progress">
+					<div class="line">
+						<div class="current"></div>
+					</div>
+					<ul class="chapters-line">
+						<li><a href="#" data-time="2" data-end="80" class="chapter-line icon-arrow-down">Dizzy Disease</a></li>
+						<li><a href="#" data-time="81" data-end="100" class="chapter-line icon-arrow-down">Break</a></li>		
+					</ul>
+				</div>
+			</div>
+			<ul class="chapters">
+				<li><a href="#" data-time="2" data-end="80" class="chapter">Dizzy Disease</a></li>
+				<li><a href="#" data-time="81" data-end="100" class="chapter">Break</a></li>
+			</ul>
+		</section>
+		
+				<section class="explications">
+			<h2>Explications</h2>
+			<p>
+				<strong>Inclure le plugin à sa page HTML :</strong><br>
+				<i>&lt;script src="js/videoPlayerYtDm-plugin.js" type="text/javascript">&lt;/script></i><br><br>
+				<strong>Déaclarer les modules au domready :</strong><br>
+				<i>$('.video-player').videoPlayerYtDm();</i><br><br>
+				<strong>Déclarer les spécificité de chaque player dans des data-attr :</strong><br>
+				<i>data-videoId="xnFhxrVEyNo"</i> l'id youtube ou dailymotion de la vidéo.<br>
+				<i>data-w="4"</i> et <i>data-h="3"</i> pour appliquer le rapport hauteur/largeur au player.<br>
+				<i>data-controls="0"</i> pour afficher ou pas les commandes natives au player.<br>
+				<i>data-type="yt ou dm"</i> pour indiquer si il s'agit d'une vidéo youtube ou dailymotion.<br>
+				<i>data-autoplay="1"</i> pour indiquer si on déclenche la lecture automatique ou pas.<br><br>
+				<strong>On peut afficher une navigation par chapitre avec des repères dans la timeline :</strong><br>
+				<i>&lt;ul class="chapters-line"><br>
+				&nbsp; &nbsp; &lt;li>&lt;a href="#" data-time="0" data-end="198" class="chapter-line icon-arrow-down">Titre chapitre&lt;/a>&lt;/li><br></i>
+				<i>data-time</i> le timecode du début du chapitre en secondes.<br>
+				<i>data-end</i> le timecode de la fin du chapitre en secondes.<br>
+				<i>class="chapter-line ..."</i> obligatoire.<br>
+				Ensemble à placer dans la structure :<br>
+				<i>&lt;div class="seekbar">&lt;div class="progress"></i><br>
+				Lorsque la vidéo atteint <i>data-time</i>, on applique à <i>chapter-line</i> la classe <i>active</i>.<br>
+				Lorsque la vidéo atteint <i>data-end</i>, on applique à <i>chapter-line</i> la classe <i>done</i>.<br><br>
+				<strong>On peut aussi afficher une navigation avec les titres des chapitres :</strong><br>
+				<i>&lt;ul class="chapters">&lt;li>&lt;a href="#" data-time="0" data-end="198" class="chapter">He's A Monster&lt;/a>&lt;/li></i><br>
+				Même principe que pour les chapitres dans la timeline.<br><br>
+				<strong>Les contrôles personnalisables :</strong><br>
+				Dans un conteneur <i>class="tools"</i>, placer des éléments <i>class="play", class="pause', class="stop", class="volume"</i> et un input de type range <i>class="volumebar"</i> dans un conteneur <i>class="actions"</i>.<br>
+				Dans le même conteneur <i>tools</i>, un élément <i>class="infos"</i> avec des éléments <i>class="time"</i> et <i>class="duration"</i> pour afficher le timecode en minutes et secondes.<br><br>
+				<strong>Personnalisation :</strong><br>
+				Les différents blocs peuvent être placés n'importe où dans le conteneur principal <i>video-player</i> et l'ensemble stylé comme souhaité.<br><br>
+				<strong>Code complet pour un module youtube :</strong><br>
+				<textarea class="code">
+<section class="video-player" data-videoId="xnFhxrVEyNo" data-w="4" data-h="3" data-controls="0" data-type="yt">
+	<div class="iframe-container">
+		<div class="video-container"></div>
+	</div>
+	<div class="tools">
+		<div class="actions">
+			<a href="#" class="play icon-play3">Play</a>
+			<a href="#" class="pause icon-pause2">Pause</a>
+			<a href="#" class="stop icon-stop2">Stop</a>
+			<a href="#" class="volume icon-volume-high">Volume</a>
+			<input class="volumebar" value="0" type="range">
+		</div>
+		<div class="infos">
+			<span class="time">00:00</span> / <span class="duration">00:00</span>
+		</div>
+	</div>
+	
+	<div class="seekbar">
+		<div class="progress">
+			<div class="line">
+				<div class="current"></div>
+			</div>
+			<ul class="chapters-line">
+				<li><a href="#" data-time="0" data-end="198" class="chapter-line icon-arrow-down">He's A Monster</a></li>
+				<li><a href="#" data-time="198" data-end="317" class="chapter-line icon-arrow-down">Gay Bar</a></li>
+				<li><a href="#" data-time="317" data-end="463" class="chapter-line icon-arrow-down">Perhaps</a></li>
+				<li><a href="#" data-time="463" data-end="658" class="chapter-line icon-arrow-down">Have Love</a></li>
+				<li><a href="#" data-time="658" data-end="846" class="chapter-line icon-arrow-down">Another Last Drink</a></li>
+				<li><a href="#" data-time="846" data-end="1119" class="chapter-line icon-arrow-down">Another Man</a></li>
+				<li><a href="#" data-time="1119" data-end="1279" class="chapter-line icon-arrow-down">The Fortune Teller</a></li>
+				<li><a href="#" data-time="1279" data-end="1498" class="chapter-line icon-arrow-down">The No Song</a></li>
+				<li><a href="#" data-time="1498" data-end="1685" class="chapter-line icon-arrow-down">I'm A Man</a></li>
+				<li><a href="#" data-time="1685" data-end="1880" class="chapter-line icon-arrow-down">The Flying Kitchen</a></li>
+				<li><a href="#" data-time="1880" data-end="2200" class="chapter-line icon-arrow-down">I Wanna Be Your Dog</a></li>
+				<li><a href="#" data-time="2200" data-end="1000000" class="chapter-line icon-arrow-down">He's A Monster (bis)</a></li>			
+			</ul>
+		</div>
+	</div>
+	<ul class="chapters">
+		<li><a href="#" data-time="0" data-end="198" class="chapter">He's A Monster</a></li>
+		<li><a href="#" data-time="198" data-end="317" class="chapter">Gay Bar</a></li>
+		<li><a href="#" data-time="317" data-end="463" class="chapter">Perhaps</a></li>
+		<li><a href="#" data-time="463" data-end="658" class="chapter">Have Love</a></li>
+		<li><a href="#" data-time="658" data-end="846" class="chapter">Another Last Drink</a></li>
+		<li><a href="#" data-time="846" data-end="1119" class="chapter">Another Man</a></li>
+		<li><a href="#" data-time="1119" data-end="1279" class="chapter">The Fortune Teller</a></li>
+		<li><a href="#" data-time="1279" data-end="1498" class="chapter">The No Song</a></li>
+		<li><a href="#" data-time="1498" data-end="1685" class="chapter">I'm A Man</a></li>
+		<li><a href="#" data-time="1685" data-end="1880" class="chapter">The Flying Kitchen</a></li>
+		<li><a href="#" data-time="1880" data-end="2200" class="chapter">I Wanna Be Your Dog</a></li>
+		<li><a href="#" data-time="2200" data-end="1000000" class="chapter">He's A Monster (bis)</a></li>
+	</ul>
+</section>				
+				</textarea>
+				
+			</p>
+		</section>
+		
+		<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+        <script src="js/videoPlayerYtDm-plugin.js" type="text/javascript"></script>
+		<script type="text/javascript">	
+			$(document).ready(function(){
+				//wait until resize is done
+				$(window).resize(function() {
+					if(this.resizeTO) clearTimeout(this.resizeTO);
+					this.resizeTO = setTimeout(function() {
+						$(this).trigger('resizeEnd');
+					}, 500);
+				});
+				
+				//wait until scroll is done
+				$(window).scroll(function() {
+					if(this.scrollTO) clearTimeout(this.scrollTO);
+					this.scrollTO = setTimeout(function() {
+						$(this).trigger('scrollEnd');
+					}, 500);
+				});
+				
+				//déclaration modules
+				function setPlugins(){
+					$('.video-player').videoPlayerYtDm();
+				}
+				setPlugins();
+			});
+		</script>
+    </body>
+
+</html>

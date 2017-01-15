@@ -1,0 +1,471 @@
+@charset 'utf-8';
+
+@import "includes/variables";
+
+@import "includes/mixins";
+@import "includes/fonts";
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	margin: 0; padding: 0;
+}
+html{
+	font-size: 62.5%;
+	font-family: 'Ubuntu', Arial, sans-serif;
+}
+body{
+	background: #000;
+	font-size: 15px;
+	font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+#trace{
+	width: 550px;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+h1{
+	padding: 1rem 1.5rem;
+	color: #adadad;
+	background: #000;
+	text-transform: uppercase;
+}
+h2{
+	margin-bottom: 1.5rem;
+	padding: 1rem 1.5rem;
+	color: #adadad;
+	background: #000;
+}
+
+.titre{
+	width: 100%;
+	max-width: 800px;
+	margin: 15px auto;
+	padding: 15px;
+	background: #adadad;
+}
+
+.explications{
+	width: 100%;
+	max-width: 1200px;
+	margin: 15px auto;
+	padding: 15px;
+	background: #adadad;
+	
+	i{
+		background: #dedede;
+	}
+	
+	.code{
+		width: 100%;
+		height: 600px;
+		padding: 1rem 1.5rem;
+		margin-top: 1.5rem;
+		background: #dedede;
+		border: 0;
+	}
+}
+
+.video-player{
+	width: 100%;
+	max-width: 800px;
+	margin: 15px auto;
+	padding: 15px;
+	background: #adadad;
+
+	.iframe-container{
+		position: relative;
+		padding-bottom: 75%; /* the padding-bottom value is bg.height/bg.width */
+		height: auto; 
+		overflow: hidden;
+		
+		iframe,
+		object,
+		embed{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+	.tools{
+		@include flexbox;	
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include flex-wrap(wrap);
+		@include align-items(center);
+		margin-top: 15px;
+		margin-top: 1.5rem;
+	}
+	
+	.actions{
+		display: block;
+		text-align: center;
+		font-size: 15px;
+		font-size: 1.5rem;
+		@include flexbox;	
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include align-items(center);
+		
+		@media (max-width: 500px){
+			width: 100%;
+		}
+		
+		a{
+			display: inline-block;
+			color: #000;
+			text-decoration: none;
+			font-size: 0;
+			margin-right: 15px;
+			margin-right: 1.5rem;
+			min-width: 50px;
+			
+			@media (max-width: 500px){
+				margin-right: 1rem;
+			}
+			
+			&:before{
+				display: inline-block;
+				font-size: 2.5rem;
+				padding: 5px;
+			}
+			
+			&:hover,
+			&.active{
+				color: rgba(254, 240, 44, 1);;
+			}
+		}
+		
+		.volume{
+			&.muted{
+				&:before{
+					content: "\ea2a";
+				}
+			}
+			&.muted33{
+				&:before{
+					content: "\ea28";
+				}
+			}
+			&.muted66{
+				&:before{
+					content: "\ea27";
+				}
+			}
+		}
+		
+		/* volume bar */
+		.volumebar{
+			width: 100px;
+			display: inline-block;
+			
+			@media (max-width: 500px){
+				width: 90px;
+				margin-right: 10px;
+			}
+			
+			-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+			background: transparent; /* Otherwise white in Chrome */
+			
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+			}
+			
+			&:focus {
+				outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+			}
+			
+			&::-ms-track {
+				width: 100%;
+				cursor: pointer;
+				/* Hides the slider so custom styles can be added */
+				background: transparent; 
+				border-color: transparent;
+				color: transparent;
+			}
+			
+			/* Special styling for WebKit/Blink */
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				height: 20px;
+				width: 6px;
+				background: #000;
+				cursor: pointer;
+				transform: translateY(-42%);
+				@media (max-width: 500px){
+					width: 40px;;
+				}
+			}
+
+			/* All the same stuff for Firefox */
+			&::-moz-range-thumb {
+				height: 20px;
+				width: 6px;
+				background: #000;
+				cursor: pointer;
+				border: 0;
+				border-radius: 0;
+				@media (max-width: 500px){
+					width: 40px;;
+				}
+			}
+
+			/* All the same stuff for IE */
+			&::-ms-thumb {
+				height: 20px;
+				width: 6px;
+				background: #000;
+				cursor: pointer;
+				@media (max-width: 500px){
+					width: 40px;;
+				}
+			}
+			
+			/* the track */
+			&::-webkit-slider-runnable-track {
+				width: 100%;
+				height: 4px;
+				cursor: pointer;
+				background: #000;
+			}
+
+			&:focus::-webkit-slider-runnable-track {
+				background: rgba(0, 0, 0, 0.75);
+			}
+
+			&::-moz-range-track {
+				width: 100%;
+				height: 4px;
+				cursor: pointer;
+				background: #000;
+				border: 0;
+				border-radius: 0;
+			}
+
+			&::-ms-track {
+				width: 100%;
+				height: 4px;
+				cursor: pointer;
+				background: transparent;
+				border-color: transparent;
+				color: transparent;
+			}
+			&::-ms-fill-lower {
+				background: #000;
+			}
+			&:focus::-ms-fill-lower {
+				background: rgba(0, 0, 0, 0.75);
+			}
+			&::-ms-fill-upper {
+				background: #000;
+			}
+			&:focus::-ms-fill-upper {
+				background: rgba(0, 0, 0, 0.75);
+			}
+		}
+	}
+	
+	.infos{
+		display: block;
+		text-align: center;
+		font-size: 15px;
+		font-size: 1.5rem;
+		
+		@media (max-width: 500px){
+			width: 100%;
+			margin-top: 1.5rem;
+			text-align: center;
+		}
+	}
+	
+	/* seek bar */
+	.seekbar{
+		margin: 15px 0;
+		margin: 1.5rem 0;
+		
+		.progress {
+			width: 100%;
+			padding: 10px 0;
+			cursor: pointer;
+			position: relative;
+			
+			.line {
+				background-color: rgba(0, 0, 0, 0.7);
+				height: 2px;
+				width: 100%;
+				
+				&:before {
+					content: " ";
+					background-color: rgba(254, 240, 44, 0.9);
+					border-radius: 6px;
+					display: block;
+					height: 6px;
+					position: absolute;
+					left: -3px;
+					top: 8px;
+					width: 6px;
+				}
+				
+				&:after {
+					content: " ";
+					background-color: rgba(0, 0, 0, 0.9);
+					border-radius: 6px;
+					display: block;
+					height: 6px;
+					position: absolute;
+					right: -3px;
+					top: 8px;
+					width: 6px;
+				}
+				
+				.current {
+					background-color: rgba(254, 240, 44, 1);
+					height: 100%;
+					width: 0;
+					position: relative;
+					z-index: 2;
+					
+					&:after {
+						content: " ";
+						background-color: rgba(254, 240, 44, 0.9);
+						border-radius: 6px;
+						display: block;
+						height: 6px;
+						position: absolute;
+						right: -3px;
+						top: -2px;
+						width: 6px;
+						z-index: 3;
+						box-shadow: 0 0 8px #fef02c;
+					}
+				}
+			}
+			
+			.chapters-line{
+				list-style: none;
+			}
+			
+			.chapter-line{
+				position: absolute;
+				z-index: 10;
+				font-size: 0;
+				top: 50%;
+				left:0;
+				color: #000;
+				text-decoration: none;
+				@include transform(translate(-50%, -100%));
+				@include transition(transform 0.3s ease-out);
+				
+				&:before{
+					font-size: 1rem;
+				}
+				
+				&:hover{
+					color: rgba(254, 240, 44, 1);
+				}
+				&.active{
+					color: rgba(254, 240, 44, 1);
+					@include transform(translate(-50%, -115%) scale(1.5));
+				}
+				
+				&.done{
+					color: rgba(254, 240, 44, 1);
+					@include transform(translate(-50%, 0));
+					&:before{
+						content: "\ea32";
+					}
+				}
+			}
+		}
+	}
+	
+	.spectrumSound{
+		.sineWave{
+			margin: auto;
+			display: block;
+			background: rgba(0, 0, 0, 0);
+			width: 100%;
+			height: 300px;
+			position: absolute;
+			left:0;
+			top: 50%;
+			transform: translate(0, -50%);
+			z-index: 5;
+		}
+		
+		.circles{
+			margin: auto;
+			display: block;
+			background: rgba(0, 0, 0, 0);
+			width: 100%;
+			height: 300px;
+			position: absolute;
+			left:0;
+			top: 50%;
+			transform: translate(0, -50%);
+			z-index: 6;
+		}
+
+		.spectrum {
+			position: absolute;
+			left:0;
+			height: 300px;
+			&.spectrumPos{
+				bottom: 12px;
+			}
+			&.spectrumNeg{
+				top: 12px;
+			}
+		}
+	}
+	.chapters{
+		@include flexbox;	
+		@include flex-direction(row);
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+		@include align-items(center);
+		
+		li{
+			display: inline-block;
+			margin:0 10px 10px 0;
+		}
+		
+		.chapter{
+			display: inline-block;
+			text-decoration: none;
+			color: #000;
+			background: #fff;
+			padding: 2px 10px;
+			font-size: 15px;
+			font-size: 1.5rem;
+			
+			&:hover,
+			&.hover{
+				color: #fff;
+				background: #000;
+			}
+			
+			&.done{
+				color: #fff;
+				background: rgba(0, 0, 0, 0.5);
+				
+				&:hover{
+					color: #fff;
+					background: #000;
+				}
+			}
+			
+			&.active{
+				color: rgba(254, 240, 44, 1);
+				background: #000;
+			}
+		}
+	}
+}
