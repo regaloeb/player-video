@@ -267,7 +267,7 @@
 			}
 			
 			//controls
-			if(plugin.o.controls === 1){
+			if(plugin.o.controls == 1){
 				$elem.find('.tools').css({'display': 'none'});
 			}
 			
